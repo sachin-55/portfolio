@@ -25,10 +25,9 @@
 
             <nav class="nav-list">
               <ul>
-                <li class="nav-items">Projects</li>
-                <li class="nav-items">About</li>
-                <li class="nav-items">Contact</li>
-
+                <a href='#projects' class="nav-link"><li class="nav-items">Projects</li></a>
+                <a href="#about" class="nav-link"><li class="nav-items">About</li></a>
+                <a href="#contact" class="nav-link"><li class="nav-items">Contact</li></a>
               </ul>
 
             </nav>
@@ -40,15 +39,70 @@
                
         </div>
     </header>
-    <section>
-      <div class="container"></div>
+    <section id='projects'>
+      <div class="container">
+        <h1 class="title">
+          Projects
+        </h1>
+        <div class="projects-list">
+          <div class="project">
+            <img src="./images/background.jpg" class="img-project">
+            <div class="project-info">
+              <div class="project-title">Project Title</div>
+              <div class="icons">js|node|react</div>
+              <div class="project-descp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.  </div>
+            </div>
+          </div>
+
+           <div class="project right">
+            <div class="project-info">
+              <div class="project-title">Project Title</div>
+              <div class="icons">js|node|react</div>
+
+              <div class="project-descp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.  </div>
+            </div>
+            <img src="./images/background.jpg" class="img-project">
+
+          </div>
+
+           <div class="project">
+            <img src="./images/background.jpg" class="img-project">
+            <div class="project-info">
+              <div class="project-title">Project Title</div>
+              <div class="icons">js|node|react</div>
+
+              <div class="project-descp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.  </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section>
-      <div class="container"></div>
+
+    <section id='about' class="light-color">
+      <div class="container">
+        <h1 class="title">
+          About
+        </h1>
+
+        <div class="about-content">
+          Wow
+        </div>
+      </div>
     </section>
-    <footer>
+    <footer id="contact">
       <div class="container"></div>
-      
+        <h1 class="title">
+        Contacts
+      </h1>
     </footer>
 
     <script src="./js/main.js"></script>
