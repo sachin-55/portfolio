@@ -11,45 +11,102 @@
 
 header{
     position: relative;
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
-                    url('../images/background.jpg') center no-repeat;
+    background: linear-gradient(90deg,rgba(0 ,0,0,0.99),rgba(10,10,10,0.99)),
+                    url("../images/background.jpg") center;
     background-size: cover;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
 }
 
-header .name{
-    position: relative;
-    font-size: 4rem;
-    top: 10rem;
-    color: aliceblue;
-    margin-right: -0.5rem;
-    display: inline-block;
-    text-align: center; 
-    font-family: 'Gingham',sans-serif;
+.header-content{
+   position: absolute;
+    top: 50%;
+    left: 0;
     width: 100%;
+    transform: translateY(-50%) ;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+header .name{
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 0px 0px 1px #fff,
+                  1px 1px 1px #000,
+                  2px 2px 1px #fff,
+                  3px 3px 1px #000;
+    font-family: 'Gingham',sans-serif;
+    font-weight: 900;
  }
-.name .first,
-.name .last{
+ .header-content .code{
+    font-size:  3rem;
+    color: #fff;
+ }
+ .code.first{
+    margin-left: -30rem;
+ }
+ .code.last{
+    margin-right: -30rem;
+ }
+.header-content .text{
     display: block;
+    font-size: 6rem;
+    color: #fff;
+    font-family: 'Gingham',sans-serif;
+    font-weight: 900;              
+
+ }
+
+
+.nav-list ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.nav-list  li{
+    cursor: pointer;
+    font-size: 2rem; 
+    padding: 1rem 5rem;
+    transition: 0.5s;
+}
+.nav-list  li:nth-child(2){
+     background-color: #fff;
+    color: #000;
+}
+.nav-list  li:hover{
+    background-color: #fff;
+    color: #000;
+}
+.nav-list  li:nth-child(2):hover{
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
 }
 
-.odd{
-    animation: increaseFont 1s linear infinite alternate-reverse;
-}
-.even{
-    animation: increaseFont 1s linear infinite alternate;
+
+
+
+   /*///////////////////////////////////////////////////////////*/
+section{
+    height: 100vh;
+    width: 100vw;
+    background:url('../images/back.jpeg');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-@keyframes increaseFont{
-    0%{
-        font-variation-settings: 'wght' 0, 'wdth' 0;
-        color: rgb(0, 208, 255);
-    }
-    100%{
-        font-variation-settings: 'wght' 700, 'wdth' 300;
-        color: rgba(75, 153, 94, 0.612);
 
-    }
+/*//////////////////////////////////*/
+
+footer{
+    height: 100vh;
+    width: 100vw;
+    background:url('../images/background.jpg') center ;
+    background-size: cover;
 }
