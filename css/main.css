@@ -139,9 +139,13 @@ h1.title{
     background: rgba(0,0,0,0.1);
     width: 76%;
     display: flex;
-    margin: 0.5rem 0;
+    margin: 3rem 0;
     transition: 0.5s;
     cursor:pointer;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .project:hover{
     transform-origin: center center;
@@ -159,11 +163,16 @@ h1.title{
     min-width: 180px;
     height: 150px;
     display:inline-block;
+    filter: grayscale(1);
+}
+.project:hover .img-project{
+    filter: grayscale(0);
 }
 .project-info{
     display: inline-block;
     vertical-align: top;
     width: 74%;
+    text-align: justify;
 }
 .project-title{
     font-weight: 700;
@@ -205,4 +214,53 @@ footer{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.contact-container .name{
+    font-size: 40px;
+    font-family: 'Monoton';
+    font-weight: 100;
+
+}
+.contact-container .phone{
+    font-size: 30px;
+}
+
+.contact-container .email{
+    font-size: 25px;
+}
+
+.contact-container .logos{
+}
+
+@media screen and (max-width:500px){
+   #projects{
+       padding: 0 0 50px 0;
+   }
+    .project.right{
+        flex-direction: column-reverse;
+        transform: translate(0px, 0px);
+    }
+    .project.right:hover{
+        transform-origin: center center;
+        transform:translateX(0%) scale(1);
+    }
+    .project{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .project:hover{
+        transform-origin: center center;
+        transform: scale(1);
+    }
 }
