@@ -14,7 +14,7 @@ body{
 }
 header{
     position: relative;
-    background: linear-gradient(90deg,rgba(0 ,0,0,0.99),rgba(10,10,10,0.99)),
+    background: linear-gradient(90deg,rgba(43, 65, 98,0.99),rgba(43, 65, 98,0.99)),
                     url("../images/background.jpg") center;
     background-size: cover;
     height: 100vh;
@@ -119,53 +119,73 @@ h1.title{
     font-family: 'Gingham',sans-serif;
     font-size: 4rem;
     padding:  3rem 0;
+    color:rgb(55, 55, 71);
+
 }
-.light-color{
+
+/* .light-color{
     color:#fff;
-}
+} */
 /*/////////////////////////////////////////////////////////////////////////////////////////////*/
 #projects{
-    background: radial-gradient(circle , rgba(210,210,210,0.9),rgba(200,200,200,0.9)),
+    background: radial-gradient(circle , rgba(205, 223, 160,0.9),rgba(205, 223, 160,0.9)),
                     url("../images/background2.jpg") ;    
 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 2rem 0px;
 }
 .projects-list{
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .project{
-    background: rgba(0,0,0,0.1);
-    width: 76%;
     display: flex;
-    margin: 3rem 0;
-    transition: 0.5s;
+}
+.project a{
+    background: rgba(161, 181, 216,0.5);
+    width: 70%;
+    display: flex;
+    margin: 2rem 0;
+    transition: 0.3s;
     cursor:pointer;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.project:hover{
-    transform-origin: center center;
-    transform: scale(1.1);
+    color:rgb(55, 55, 71);
 }
 .project.right{
-    transform: translateX(31.65%);
+    justify-content: flex-end;
 }
-.project.right:hover{
-    transform-origin: center center;
-    transform:translateX(31.65%) scale(1.1);
+.project a:hover{
+    transform-origin: center left;
+    transform: scale(1.1);
+}
+
+.project.right a:hover{
+    transform-origin: center right;
+}
+
+.project.unitCalculator a:hover{
+    background: #1a6b64d7;
+    color: #cef4f1;
+}
+.project.yoursInsights a:hover{
+    background: #ed6b5acc;
+    color: #fcdad6;
+}
+.project.insta a:hover{
+    background: #0295F6;
+    color: #bfe2fa;
 }
 .img-project{
     width: 35%;
     min-width: 180px;
     height: 150px;
     display:inline-block;
-    filter: grayscale(1);
+    filter: grayscale(0.7);
 }
-.project:hover .img-project{
+.project a:hover .img-project{
     filter: grayscale(0);
 }
 .project-info{
@@ -189,19 +209,35 @@ h1.title{
 }
 /*///////////////////////////////////////////////////////////////////////////////////////////////*/
 #about{
-  background: linear-gradient(90deg,rgba(0 ,0,0,0.97),rgba(10,10,10,0.97)),
+  background: linear-gradient(90deg,rgba(79, 99, 103,0.97),rgba(79, 99, 103,0.97)),
                     url("../images/background3.jpg") ;    
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 2rem 0rem;
 }
 
+.about.title{
+    color:#fcfcfc;
+}
 .about-content{
    background-color:  rgba(210,210,210,0.1);
    padding: 2rem;
    width: 100%;
+   color:#fcfcfc;
+   font-size: 1.6rem;
 
 }
+
+.about-content ul li{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0rem;
+}
+.about-content ul li div{
+    margin: 1rem 0rem 0rem 3.5rem;
+}
+
 
 
 /*//////////////////////////////////*/
@@ -226,9 +262,10 @@ footer{
 }
 
 .contact-container .name{
-    font-size: 40px;
+    font-size: 48px;
     font-family: 'Monoton';
-    font-weight: 100;
+    font-weight: 200;
+    word-spacing: 1rem;
 
 }
 .contact-container .phone{
