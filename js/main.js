@@ -10,22 +10,22 @@ let aboutY = about.offsetTop;
 let projectsY = projects.offsetTop;
 let contactY = contact.offsetTop;
 
-// function toggleMenuClass(elementIndex,otherIndex){
-
-//     navItems[elementIndex].classList.add('selected-tab');
-//     navItems[otherIndex[0]].classList.remove('selected-tab');
-//     navItems[otherIndex[1]].classList.remove('selected-tab');
-// }
-
-// navItems[0].addEventListener('click',()=>toggleMenuClass(0,[1,2]));
-// navItems[1].addEventListener('click',()=>toggleMenuClass(1,[0,2]));
-// navItems[2].addEventListener('click',()=>toggleMenuClass(2,[0,1]));
-
-
+let nameEle;
 document.addEventListener('scroll',function(){
   let scrollPositionY = window.scrollY;
   if(scrollPositionY > 450){
     navBar.classList.add('floatingNav');
+    if(!document.getElementById('navScrollName')){
+      nameEle = document.createElement('div');
+      nameEle.classList.add('navName');
+      nameEle.setAttribute("id", "navScrollName");
+      nameEle.innerText='Sachin Bhattarai';
+      nameEle.onclick= function(){
+        window.scrollTo(0,0);
+      }
+      navBar.appendChild(nameEle);
+    }
+
     if(scrollPositionY >= aboutY){
       navBar.classList.add('aboutBg');
       navBar.classList.remove('projectsBg');
@@ -63,6 +63,7 @@ document.addEventListener('scroll',function(){
     navItems[1].classList.remove('scroll-tab');
     navItems[0].classList.remove('scroll-tab'); 
     navItems[2].classList.remove('scroll-tab');
+    navBar.removeChild(nameEle);
 
   }
 })
